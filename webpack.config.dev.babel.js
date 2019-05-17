@@ -26,7 +26,11 @@ export default {
           loader: 'babel-loader'
         },
         include: path.resolve(__dirname, 'src')
-      }
-    ]
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'file-loader',
+        options: {},
+    }]
   }
 };
